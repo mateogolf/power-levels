@@ -1,0 +1,5 @@
+<form (submit)="onSubmit()" #myform='ngForm'>
+  <label for="power">Initial Power Level:(max:100)</label>
+  <input type="number" name="power" required min="1" max="100" placeholder="100" [(ngModel)]="saiyan.power">
+  <button type="submit" [disabled]="myform.invalid">Calculate Powers</button>
+</form>

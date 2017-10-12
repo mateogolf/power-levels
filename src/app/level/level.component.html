@@ -1,0 +1,9 @@
+<fieldset *ngFor="let form of forms">
+    <legend>{{form.name}}Component</legend>
+    <p>Power Level: <span class="power">{{powerLevel*form.mult}}</span></p>
+    <h3>
+        <span *ngIf="(powerLevel*form.mult)>9000 && (powerLevel*form.mult) < 20000">"over 9000!"</span>
+        <span *ngIf="(powerLevel*form.mult) > 20000 && (powerLevel*form.mult) !=50000">"Superlative!"</span>
+        <span *ngIf="(powerLevel*form.mult)==50000">"The One"</span>
+    </h3>
+</fieldset>
